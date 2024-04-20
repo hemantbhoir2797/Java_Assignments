@@ -1,0 +1,643 @@
+042_Hemant Bhoir_KH
+
+Collection coding questions:
+
+1.	Write a Java program to create a new array list, add some colors (string) and print out the collection.
+
+import java.util.ArrayList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		System.out.println(list); //[Red, Black, Blue, Green, Purple]
+
+		
+	}
+
+}
+
+2.	Write a Java program to insert an element into the array list at the first position.
+
+import java.util.ArrayList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		list.add(0,"Yellow");//adding Yellow at first position
+		
+		
+		System.out.println(list); //[Yellow, Red, Black, Blue, Green, Purple]
+
+		
+	}
+
+}
+
+3.	Write a Java program to retrieve an element (at a specified index) from a given array list.
+
+import java.util.ArrayList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		String str = list.get(1);//Black
+		
+		System.out.println(str); //Black
+
+		
+	}
+
+}
+
+4.	Write a Java program to sort a given array list.
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		Collections.sort(list);
+		
+		System.out.println(list); //[Black, Blue, Green, Purple, Red]
+	
+	}
+
+}
+
+5.	 Write a Java program to reverse elements in a array list.
+
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(152);
+		list.add(256);
+		list.add(12);
+		list.add(11);
+		list.add(55);
+		
+		Collections.reverse(list);
+		
+		System.out.println(list); //[55, 11, 12, 256, 152]
+	
+	}
+
+}
+
+6.	Write a Java program of swap two elements in an array list.
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(152);
+		list.add(256);
+		list.add(12);
+		list.add(11);
+		list.add(55);
+		
+		System.out.println("Before Swap list :");
+		for(Integer i : list)
+			System.out.print(i+" ");
+		
+		Collections.swap(list, 0, 3); //swapping 152 and 11 number
+		
+		System.out.println();
+		System.out.println("After Swap list :");
+		for(Integer i : list)
+			System.out.print(i+" ");
+	
+	}
+
+}
+output:
+	
+Before Swap list :
+152 256 12 11 55 
+After Swap list :
+11 256 12 152 55 
+
+7.	Write a Java program to print all the elements of a ArrayList using the position of the elements.
+
+import java.util.ArrayList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(152);
+		list.add(256);
+		list.add(12);
+		list.add(11);
+		list.add(55);
+		
+		for(int i=0;i<list.size();i++)
+			System.out.print(list.get(i)+" "); //152 256 12 11 55 
+
+	}
+}
+
+8.	Write a Java program to append the specified element to the end of a linked list.
+
+import java.util.LinkedList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list = new LinkedList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		for(String s : list)
+		System.out.print(s+" "); //Red Black Blue Green Purple 
+
+		
+	}
+
+}
+
+9.	Write a Java program to insert the specified element at the specified position in the linked list.
+
+import java.util.LinkedList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list = new LinkedList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		list.add(2,"Yellow");
+		
+		for(String s : list)
+		System.out.print(s+" "); //Red Black Yellow Blue Green Purple 
+		
+	}
+
+}
+
+10.	Write a Java program to insert elements into the linked list at the first and last position.
+
+import java.util.LinkedList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list = new LinkedList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		list.add(0,"Yellow"); //add at first index
+		list.add(5,"Orange"); //add at last index
+		
+		for(String s : list)
+		System.out.print(s+" "); //Yellow Red Black Blue Green Orange Purple
+		
+	}
+}
+
+11.	Write a Java program to display the elements and their positions in a linked list. 
+
+import java.util.LinkedList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list = new LinkedList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		System.out.println("Position"+" "+"Element");
+		for(int i=0;i<list.size();i++)
+			System.out.println(i+"        "+list.get(i)); 		
+	}
+}
+output:
+Position Element
+0        Red
+1        Black
+2        Blue
+3        Green
+4        Purple
+
+12.	 Write a Java program to check if a particular element exists in a linked list.
+
+import java.util.LinkedList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list = new LinkedList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+			
+		if(list.contains("Black"))
+			System.out.println(" Element is exist in list"); //printed
+		else
+			System.out.println(" Element is not exist in list");
+		
+		if(list.contains("Yellow"))
+			System.out.println(" Element is exist in list");
+		else
+			System.out.println(" Element is not exist in list"); //printed
+		}
+			 
+}
+
+13.	 Write a Java program to compare two linked lists.
+
+import java.util.LinkedList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list1= new LinkedList<String>();
+		list1.add("Red");
+		list1.add("Green");
+		list1.add("Black");
+		list1.add("White");
+		list1.add("Pink");
+
+		LinkedList<String> list2= new LinkedList<String>();
+		list2.add("Red");
+		list2.add("Green");
+		list2.add("Black");
+		list2.add("Orange");
+
+		LinkedList<String> list = new LinkedList<String>();
+		for (String e : list1)
+		   list.add(list2.contains(e) ? "Yes" : "No");
+		
+		System.out.println(list);   //[Yes, Yes, Yes, No, No]
+		}
+				
+}
+
+14.	Write a Java program to replace an element in a linked list.
+
+import java.util.LinkedList;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list = new LinkedList<String>();
+		list.add("Red");
+		list.add("Black");
+		list.add("Blue");
+		list.add("Green");
+		list.add("Purple");
+		
+		System.out.println("Original linked list: " + list);
+		//Original linked list: [Red, Black, Blue, Green, Purple]
+		
+        list.set(2, "Orange");
+        
+        System.out.println("New linked list: " + list);
+        //New linked list: [Red, Black, Orange, Green, Purple]
+
+		
+	}
+}
+15.	Write a Java program to iterate through all elements in a hash list.
+
+import java.util.HashSet;
+import java.util.Iterator;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		HashSet<String> hset = new HashSet<String>();
+		hset.add("Red");
+		hset.add("Black");
+		hset.add("Blue");
+		hset.add("Green");
+		hset.add("Purple");
+		
+		Iterator<String> it = hset.iterator();
+		while(it.hasNext())
+			System.out.print(it.next()+" "); //Red Blue Purple Black Green 
+		
+		
+	}
+}
+16.	Write a Java program to empty an hash set.
+
+import java.util.HashSet;
+public class Ques {
+
+	public static void main(String[] args) 
+	{
+		HashSet<String> hset = new HashSet<String>();
+		hset.add("Red");
+		hset.add("Black");
+		hset.add("Blue");
+		hset.add("Green");
+		hset.add("Purple");
+		
+		System.out.println("Before HashSet :"+hset);//Before HashSet :[Red, Blue, Purple, Black, Green]
+		
+		hset.removeAll(hset);
+		
+		System.out.print("After HashSet :"+hset);//After HashSet :[]
+	
+	}
+}
+17.	Write a Java program to convert a hash set to an array.
+
+import java.util.HashSet;
+public class Ques 
+{
+
+	public static void main(String[] args) 
+	{
+		HashSet<String> hset = new HashSet<String>();
+		hset.add("Red");
+		hset.add("Black");
+		hset.add("Blue");
+		hset.add("Green");
+		hset.add("Purple");
+		
+		System.out.println("Hash Set: " + hset);
+		// Creating an Array
+		String[] arr = new String[hset.size()];
+		hset.toArray(arr);
+		
+		// Displaying Array elements
+		System.out.println("Array elements are : ");
+		
+		for(String element : arr)
+		{
+		  System.out.print(element+" ");
+		}
+	}
+}
+
+18.	Write a Java program to compare two sets and retain elements which are same on both sets.
+
+import java.util.HashSet;
+public class Ques 
+{
+
+	public static void main(String[] args) 
+	{
+		HashSet<String> hset1 = new HashSet<String>();
+	     
+		  hset1.add("Red");
+		  hset1.add("Green");
+		  hset1.add("Black");
+		  hset1.add("White");
+		  
+		  System.out.println("HashSet1 content: "+hset1);
+		  
+		  HashSet<String>hset2 = new HashSet<String>();
+		  hset2.add("Red");
+		  hset2.add("Pink");
+		  hset2.add("Black");
+		  hset2.add("Orange");
+		  
+		  System.out.println("HashSet2 content: "+hset2);
+		  
+		  hset1.retainAll(hset2);
+		  
+		  System.out.println("HashSet content:");
+		  System.out.println(hset1);
+	}
+}
+
+output:
+HashSet1 content: [Red, White, Black, Green]
+HashSet2 content: [Red, Pink, Black, Orange]
+HashSet content:
+[Red, Black]
+
+19.	Write a Java program to create a new tree set, add some colors (string) and print out the tree set.
+
+import java.util.TreeSet;
+public class Ques 
+{
+
+	public static void main(String[] args) 
+	{
+		TreeSet<String> tset = new TreeSet<String>();
+	     
+		tset.add("Red");
+		tset.add("Green");
+		tset.add("Black");
+		tset.add("White");
+		  
+		  System.out.println("TreeSet content: "+tset);//TreeSet content: [Black, Green, Red, White]
+		  
+	}
+}	
+
+20.	Write a Java program to find the numbers less than 7 in a tree set. 
+
+import java.util.TreeSet;
+public class Ques 
+{
+
+	public static void main(String[] args) 
+	{
+	   TreeSet <Integer> tnum = new TreeSet<Integer>();
+	   TreeSet <Integer> theadset = new TreeSet<Integer>();
+	     
+	   // Add numbers in the tree
+	   tnum.add(1);
+	   tnum.add(2);
+	   tnum.add(3);
+	   tnum.add(5);
+	   tnum.add(6);
+	   tnum.add(7);
+	   tnum.add(8);
+	   tnum.add(9);
+	   tnum.add(10);
+	     
+	   // Find numbers less than 7
+	   theadset = (TreeSet<Integer>)tnum.headSet(7);  
+
+	   // create an iterator
+	   Iterator<Integer> it = theadset.iterator();
+	   
+	     
+	   //Displaying the tree set data
+	   System.out.println("Tree set data: ");     
+	   while (it.hasNext()){
+	   System.out.print(it.next() + " "); //1 2 3 5 6 
+	   }
+		  
+	}
+}	
+
+
+
+21.	Write a Java program to remove all the elements from a priority queue.
+
+import java.util.PriorityQueue;
+public class Ques 
+{
+	public static void main(String[] args) 
+	{
+		
+	PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+	pq.add(10);
+	pq.add(20);
+	pq.add(30);
+	pq.add(40);
+		
+		
+	System.out.println("Before PriorityQueue elements : "+pq);//[10, 20, 30, 40]
+		
+	pq.clear();
+		
+	System.out.println("After PriorityQueue elements : "+pq);// []
+	
+	}
+}
+
+22.	 Write a Java program to count the number of key-value (size) mappings in a map
+
+import java.util.Map;
+public class Ques 
+{
+	public static void main(String[] args) 
+	{
+		HashMap<Integer,String> hmap= new HashMap<Integer,String>();  
+		hmap.put(1,"Red");
+		hmap.put(2,"Green");
+		hmap.put(3,"Black");
+		hmap.put(4,"White");
+		hmap.put(5,"Blue");
+		
+		System.out.println("The number of key-Value  : "+hmap.size()); //5
+		
+		
+	
+	}
+}
+
+23.	Write a Java program to convert a priority queue to an array containing all of the elements of the queue
+
+import java.util.PriorityQueue;
+public class Ques 
+{
+	public static void main(String[] args) 
+	{
+		
+		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+		pq.add(10);
+		pq.add(20);
+		pq.add(30);
+		pq.add(40);
+		
+		
+		System.out.println("PriorityQueue elements : "+pq);
+		
+		List<Integer> arr = new ArrayList<Integer>(pq);
+		
+		System.out.println("Array contains all elements od Queue: "+arr);
+	
+	}
+}
+output:
+
+PriorityQueue elements : [10, 20, 30, 40]
+Array contains all elements od Queue: [10, 20, 30, 40]
+
+24.	Write a Java program to check whether a map contains key-value mappings (empty) or not
+
+import java.util.Map;
+public class Ques 
+{
+	public static void main(String[] args) 
+	{
+		HashMap<Integer,String> hmap= new HashMap<Integer,String>();  
+		hmap.put(1,"Red");
+		hmap.put(2,"Green");
+		hmap.put(3,"Black");
+		hmap.put(4,"White");
+		hmap.put(5,"Blue");
+	    
+		boolean res = hmap.isEmpty();
+		
+		System.out.println("Is HashMap Empty : "+res);//Is HashMap Empty : false
+		
+		hmap.clear();
+		
+		res = hmap.isEmpty();
+		
+		System.out.println("Is HashMap Empty : "+res);//Is HashMap Empty : true
+	
+	}
+}
+
+25.	Write a Java program to get the value of a specified key in a map
+
+import java.util.Map;
+public class Ques 
+{
+public static void main(String[] args) 
+{
+	HashMap<Integer,String> hmap= new HashMap<Integer,String>();  
+	hmap.put(1,"Red");
+	hmap.put(2,"Green");
+	hmap.put(3,"Black");
+	hmap.put(4,"White");
+	hmap.put(5,"Blue");
+	    
+	String str = hmap.get(3); 
+	System.out.print("Value for key 3 is: "+str); //Value for key 3 is: Black
+
+}
+}
+
+
+
